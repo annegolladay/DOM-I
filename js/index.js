@@ -40,11 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-
 //console.log(logo);
+//Update Img src for logo???
 
-const navBar = document.querySelectorAll('nav > a');
 
+//Nav
+const navBar = document.querySelectorAll('nav > a'); //Access Nav
+//Adding content to the page
 navBar[0].textContent = siteContent.nav['nav-item-1'];
 navBar[1].textContent = siteContent.nav['nav-item-2'];
 navBar[2].textContent = siteContent.nav['nav-item-3'];
@@ -52,10 +54,59 @@ navBar[3].textContent = siteContent.nav['nav-item-4'];
 navBar[4].textContent = siteContent.nav['nav-item-5'];
 navBar[5].textContent = siteContent.nav['nav-item-6'];
 
-navBar.forEach(item => item.style.color = 'green');
+navBar.forEach(item => item.style.color = 'green'); //Nav color to green
 console.log(navBar);
 
-//Update Img src for logo
+
+//CTA
+
+const ctaTitle = document.querySelector('h1'); //Access CTA
+
+ctaTitle.textContent = siteContent.cta['h1']; //Add title to page
+//h1 DOM Is Awesome add breaks next
+//button Get Started
+//img src "img/header-img.png"
+
+
+//Main Content
+//const mainContent = document.querySelectorAll('.main-content'); //Access section
+//console.log(mainContent);
+
+//Top Content
+const topContent = document.querySelector('.top-content');
+//console.log(topContent);
+
+const featuresTextContent = topContent.querySelectorAll('h4');
+const featuresParaTextContent = topContent.querySelectorAll('p');
+const aboutTextContent = topContent.querySelectorAll('h4');
+const aboutParaTextContent = topContent.querySelectorAll('p');
+
+const middleImage = document.querySelector('#middle-img');
+
+//Bottom Content
+const bottomContent = document.querySelector('.bottom-content');
+//console.log(bottomContent);
+
+const servicesTextContent = bottomContent.querySelectorAll('h4');
+const servicesParaTextContent = bottomContent.querySelectorAll('p');
+const productsTextContent = bottomContent.querySelectorAll('h4');
+const productsParaTextContent = bottomContent.querySelectorAll('p');
+const visionTextContent = bottomContent.querySelectorAll('h4');
+const visionParaTextContent = bottomContent.querySelectorAll('p');
+
+
+//Contact
+const contactSection = document.querySelector('.contact');
+//console.log(contactSection);
+
+const titleContact = contactSection.querySelectorAll('h4');
+const addressContact = contactSection.querySelectorAll('p');
+const phoneContact = contactSection.querySelectorAll('p');
+const emailContact = contactSection.querySelectorAll('p');
+
+//Footer
+const footerContent = document.querySelector('p');
+
 
 
 //Change title
@@ -73,4 +124,3 @@ const navLinks = document.querySelectorAll('nav')
 //Button
 
 
-//Main Content
