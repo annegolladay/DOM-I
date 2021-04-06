@@ -59,27 +59,57 @@ console.log(navBar);
 
 
 //CTA
+const ctaSection = document.querySelector('.cta');
+//console.log(ctaSection);
 
-const ctaTitle = document.querySelector('h1'); //Access CTA
+const ctaText = ctaSection.querySelector('.cta-text');
+//const ctaTitle = ctaText.querySelectorAll('h1');
+const ctaTitle = ctaText.querySelector('h1');
+const ctaButton = ctaText.querySelector('button');
+const ctaImage = ctaSection.querySelector('#cta-img');
 
 ctaTitle.textContent = siteContent.cta['h1']; //Add title to page
-//h1 DOM Is Awesome add breaks next
-//button Get Started
-//img src "img/header-img.png"
+ctaButton.textContent = siteContent.cta['button'];
+ctaImage.src = "img/header-img.png";
 
 
 //Main Content
-//const mainContent = document.querySelectorAll('.main-content'); //Access section
-//console.log(mainContent);
+const mainContent = document.querySelector('.main-content'); //Access section
+const mainContentText = mainContent.querySelectorAll('.text-content')
+mainContentText.forEach((item, i) => {
+  const content = [
+    siteContent['main-content']['features-content'],
+    siteContent['main-content']['about-content'],
+    siteContent['main-content']['services-content'],
+    siteContent['main-content']['product-content'],
+    siteContent['main-content']['vision-content'],
+  ]
+  item.textContent = content[i]
+})
+console.log(mainContent);
 
 //Top Content
 const topContent = document.querySelector('.top-content');
+const topContentText = topContent.querySelectorAll('.text-content')
+
+// topContentText.forEach((item, i) => {
+//   const content = [
+//     siteContent['main-content']['features-content'],
+//     siteContent['main-content']['about-content'],
+//   ]
+//   item.textContent = content[i]
+// })
 //console.log(topContent);
 
-const featuresTextContent = topContent.querySelectorAll('h4');
-const featuresParaTextContent = topContent.querySelectorAll('p');
-const aboutTextContent = topContent.querySelectorAll('h4');
-const aboutParaTextContent = topContent.querySelectorAll('p');
+const featuresTextContent = document.querySelector('h4');
+const featuresParaTextContent = document.querySelector('p');
+//Adding Content to Features
+featuresTextContent.textContent = siteContent['main-content']['features-h4'];
+featuresParaTextContent.textContent = siteContent['main-content']['p'];
+
+const aboutTextContent = topContent.querySelector('h4');
+const aboutParaTextContent = topContent.querySelector('p');
+//Adding Content to About
 
 const middleImage = document.querySelector('#middle-img');
 
